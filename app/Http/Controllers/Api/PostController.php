@@ -10,6 +10,7 @@ class PostController extends Controller
     public function index()
     {
         return response()->json([
+            'success' => true,
             'posts' => 'Gets post from database',
         ]);
     }
