@@ -13,13 +13,11 @@ class UserController extends Controller
         $validator = Validator::make($request->all(),[
             'name' => 'required|max:100',
             'email' => 'required|unique:users',
-            'contact_number' => 'required|max:14|min:11',
             'password' => 'required|min:8',
         ],[
             'name.required' => 'Required Name!',
             'email.required' => 'Required Email',
-            'email.unique' => 'Your email already exists',
-            'contact_number' => 'Required phone number'
+            'email.unique' => 'Your email already exists'
         ]);
 
         if($validator->fails())
