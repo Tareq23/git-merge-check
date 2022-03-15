@@ -22,13 +22,11 @@ class UserController extends Controller
             'contact_number' => 'Required phone number'
         ]);
 
-        // if(count($validator->fails()))
         if($validator->fails())
         {
             return response()->json([
                 'error' => $validator->errors(),
             ]);
-            // return response()->withErrors($validator)->withInput();
         }
         return response()->json([
             'succress' => true
