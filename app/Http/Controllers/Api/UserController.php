@@ -17,7 +17,7 @@ class UserController extends Controller
         ],[
             'name.required' => 'Required Name!',
             'email.required' => 'Required Email',
-            'email.unique' => 'Your email already exists'
+            'email.unique' => 'already exists this email'
         ]);
 
         if($validator->fails())
